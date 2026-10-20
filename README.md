@@ -6,7 +6,7 @@ This repository contains the raw data, processed data, and R scripts used to cha
 
 
 
-### Workflow summary
+# Workflow summary
 
 1. Run "prepare_metabolomics_df.R".
 2. Run "phylo_funct_dist.R".
@@ -14,7 +14,7 @@ This repository contains the raw data, processed data, and R scripts used to cha
 
 
 
-### Raw data (data/01_raw/)
+# Raw data (data/01_raw/)
 
 covariates.csv — Site-level covariates, one row per site. See the data dictionary below.
 
@@ -50,14 +50,14 @@ One row per sample.
 - "Plants" — plant species sampled.
 - "flower_vocs.csv" contains 10 more sample columns than listed here, which are not linked to a species.
 
-# Data dictionary — "covariates.csv"
+## Data dictionary — "covariates.csv"
 
 Variable | Description 
 ugs | Site ID (matches the rows of "flora_mat.csv") 
 ugs_type | Urban green space type: "Allotment", "Garden", "Park", "Real Estate", or "Ruderal" (12 sites each) 
 human_index | Index of human influence at the site, ranging from 0 to 1 
 
-# Data dictionary — "flora_traits.csv"
+## Data dictionary — "flora_traits.csv"
 
 Variable | Description
 "species" | Plant species (matches "flora_taxo.csv" and the columns of "flora_mat.csv")
@@ -83,7 +83,7 @@ Variable | Description
 
 
 
-### Processed data ("data/02_processed/")
+# Processed data ("data/02_processed/")
 
 Leaf files are built from "leaf_metabolom.csv" and "leaf_metadata.csv". 
 Flower files are built from "flower_vocs.csv" and "flower_metadata.csv". 
@@ -117,7 +117,7 @@ metric | "comdist" (mean pairwise distance between all species of two communitie
 
 
 
-### Analysis scripts
+# Analysis scripts
 
 prepare_metabolomics_df.R — Builds all processed chemistry tables from the raw leaf and flower data.
 Builds the species x feature matrix and site x feature matrix by summing the species profiles over the species present at each site.
